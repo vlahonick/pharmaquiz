@@ -45,16 +45,6 @@ services:
             - ~
         calls:
             - [ setTranslationDomain, [PharmaQuizCoreBundle]]
-    pharma_quiz_core.admin.definition:
-        class: PharmaQuiz\CoreBundle\Admin\DefinitionAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Definitions" }
-        arguments:
-            - ~
-            - PharmaQuiz\CoreBundle\Entity\Definition
-            - ~
-        calls:
-            - [ setTranslationDomain, [PharmaQuizCoreBundle]]
     quote_factory:
         class: PharmaQuiz\CoreBundle\QuoteFactory
         arguments:

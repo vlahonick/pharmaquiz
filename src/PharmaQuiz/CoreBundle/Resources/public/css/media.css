@@ -530,6 +530,10 @@
     display: none;
   }
 
+  nav label.toggle {
+    margin: 0;
+  }
+
   .toggle {
     display: block;
     background: #222;
@@ -542,8 +546,12 @@
     cursor: pointer;
   }
 
-  .toggle:hover {
-    background: #000;;
+  nav a {
+    padding: 0 20px;
+  }
+
+  .toggle {
+    background: #000;
   }
 
   [id^=drop]:checked + ul {
@@ -553,45 +561,11 @@
   nav ul li {
     display: block;
     width: 100%;
+    border-top: 1px solid #333;
   }
 
   nav ul {
     float: none;
-  }
-
-  nav ul ul .toggle, nav ul ul a {
-    padding: 0 40px;
-  }
-
-  nav ul ul ul a {
-    padding: 0 80px;
-  }
-
-  nav a:hover, nav ul ul ul a {
-    background: #000;
-  }
-
-  nav ul li ul li .toggle, nav ul ul a {
-    background-color: #212121;
-  }
-
-  nav ul ul {
-    float: none;
-    position: static;
-    color: #ffffff;
-  }
-
-  nav ul ul li:hover > ul, nav ul li:hover > ul {
-    display: none;
-  }
-
-  nav ul ul li {
-    display: block;
-    width: 100%;
-  }
-
-  nav ul ul ul li {
-    position: static;
   }
 }
 

@@ -16,7 +16,7 @@
   }
 
   #navigation ul li.first a {
-    padding-left: 26px;
+    padding-left: 22px;
   }
 
 /*
@@ -30,7 +30,7 @@
   }
 
   .slider-holder span.slider-b {
-    background: url(../images/t-slider-bottom.png) no-repeat 0 0;
+    background: url(../../bundles/pharmaquizcore/images/t-slider-bottom.png) no-repeat 0 0;
     width: 748px;
     height: 30px;
     position: absolute;
@@ -52,7 +52,7 @@
     width: 748px;
     height: 292px;
     position: relative;
-    background: url(../images/t-slide-img.jpg) no-repeat 0 0;
+    background: url(../../bundles/pharmaquizcore/images/t-slide-img.jpg) no-repeat 0 0;
   }
 
   .slider ul.slides {
@@ -104,7 +104,7 @@
   }
 
   .main section {
-    background: url(../images/t-section-shadow.png) no-repeat center bottom;
+    background: url(../../bundles/pharmaquizcore/images/t-section-shadow.png) no-repeat center bottom;
   }
 
   .main .cols {
@@ -211,7 +211,13 @@
     display: block;
     margin: 0 auto;
     padding: 0 0 0 0;
-    width:400px;
+    width: 400px;
+  }
+
+  .lang-menu {
+    float: none;
+    margin: 0;
+    text-align: center;
   }
 
   .lang-menu li {
@@ -244,7 +250,7 @@
   }
 
   #navigation a.nav-btn span.arr {
-    background: url(../images/nav-arr.png) no-repeat 0 0;
+    background: url(../../bundles/pharmaquizcore/images/nav-arr.png) no-repeat 0 0;
     width: 13px;
     height: 9px;
     position: absolute;
@@ -253,7 +259,7 @@
   }
 
   #navigation a.nav-btn span.arr.active {
-    background: url(../images/nav-arr.png) no-repeat 0 bottom;
+    background: url(../../bundles/pharmaquizcore/images/nav-arr.png) no-repeat 0 bottom;
   }
 
   #navigation ul li.active {
@@ -274,7 +280,7 @@
     display: block;
     line-height: 36px !important;
     float: none;
-    background: url(../images/navigation.png) repeat 0 0;
+    background: url(../../bundles/pharmaquizcore/images/navigation.png) repeat 0 0;
   }
 
   #navigation ul li a {
@@ -282,7 +288,7 @@
   }
 
   #navigation ul li.first a {
-    padding-left: 26px;
+    padding-left: 22px;
   }
 
   .m-slider {
@@ -295,7 +301,7 @@
   }
 
   .slider-holder span.slider-b {
-    background: url(../images/m-slider-bottom.png) no-repeat 0 0;
+    background: url(../../bundles/pharmaquizcore/images/m-slider-bottom.png) no-repeat 0 0;
     width: 310px;
     height: 12px;
     position: absolute;
@@ -318,7 +324,7 @@
     height: 181px;
     overflow: hidden;
     position: relative;
-    background: url(../images/m-slide-img.jpg) no-repeat 0 0;
+    background: url(../../bundles/pharmaquizcore/images/m-slide-img.jpg) no-repeat 0 0;
   }
 
   .slider ul.slides li {
@@ -404,7 +410,7 @@
 
   .main a.m-btn-grey {
     display: block;
-    background: url(../images/m-btn-grey.png) repeat-x 0 0;
+    background: url(../../bundles/pharmaquizcore/images/m-btn-grey.png) repeat-x 0 0;
     margin: 0 10px 14px;
     height: 39px;
     text-align: center;
@@ -460,44 +466,6 @@
     width: 25%;
   }
 
-  .testimonial h2 {
-    font-size: 21px;
-  }
-
-  .testimonial p.author {
-    text-align: center;
-  }
-
-  .socials {
-    background: url(../images/socials-bg.png) repeat-x 0 0;
-    padding-bottom: 20px;
-    height: 100%;
-  }
-
-  .socials-inner {
-    padding-left: 10px;
-  }
-
-  .socials h3 {
-    float: none;
-    display: block;
-  }
-
-  .socials ul li {
-    display: block;
-    float: none;
-    line-height: 30px;
-  }
-
-  .socials ul li a {
-    display: block;
-    float: none;
-  }
-
-  .socials ul li a span {
-    top: 4px;
-  }
-
   #footer h2 {
     padding-bottom: 12px;
   }
@@ -509,9 +477,7 @@
   }
 
   .footer-cols .col {
-    width: 150px;
-    float: none;
-    display: block;
+    width: 50%;
     padding-bottom: 22px;
   }
 
@@ -569,16 +535,16 @@
 @media only screen and ( max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)  {
 
   #navigation a.nav-btn span.arr {
-    background: url('../images/nav-arr@2x.png') no-repeat 0 0;
+    background: url('../../bundles/pharmaquizcore/images/nav-arr@2x.png') no-repeat 0 0;
     background-size: 13px 18px;
   }
 
   #navigation a.nav-btn span.arr.active {
-    background: url('../images/nav-arr@2x.png') no-repeat 0 bottom;
+    background: url('../../bundles/pharmaquizcore/images/nav-arr@2x.png') no-repeat 0 bottom;
     background-size: 13px 18px;
   }
 
-  #logo a { background: url(../images/pharmaquiz_logo_small.jpg) no-repeat 0 0;
+  #logo a { background: url(../../bundles/pharmaquizcore/images/pharmaquiz_logo_small.jpg) no-repeat 0 0;
     background-size: 81px 33px;
   }
 

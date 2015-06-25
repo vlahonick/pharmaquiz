@@ -289,19 +289,19 @@ article, aside, details, footer, header, menu, nav, section {
 .main h1, .main h2, .main h3, .main h4 {
   color: #2d5900;
   line-height: 22px;
-  padding: 25px 0 8px 0;
+  padding: 20px 0 5px 0;
   font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .main h1 {
   font-size: 28px;
   border-bottom: 1px dotted #ccc;
-  margin-bottom: 25px;
 }
 
-._home .main h1 {
-  margin: 0 0 15px 20px;
+._home .main ul li {
+  line-height: 30px;
 }
 
 ._quiz_results .main h1 {
@@ -333,10 +333,11 @@ article, aside, details, footer, header, menu, nav, section {
   list-style-position: outside;
 }
 
-.main ul li {
-  padding-bottom: 6px;
-  padding-left: 10px;
-  background: url('../images/arr-ico.png') no-repeat 0 8px;
+.main ul li:before {
+  font-family: "FontAwesome";
+  content: "\f105";
+  padding: 0 5px 0 0;
+  margin: 0;
 }
 
 .main ul li a {
@@ -624,24 +625,78 @@ select {
 
 table {
   width: 100%;
-  margin: 2% 2% 0 0;
-  text-align: center;
+}
+
+th, td {
+  padding: 5px;
 }
 
 th {
-  font-weight: bold;
-  background: #f1f1f1;
-  text-align: left;
-  border-right: 1px solid #fff;
-  font-size: 16px;
-  padding: 5px 0 5px 10px;
+  background: #aaa;
+  color: #fff;
 }
 
-td {
-  text-align: left;
-  font-size: 14px;
-  padding: 5px 0 5px 10px !important;
-  background: #f1f1f1;
+table#quiz-categories td, table#quiz-categories th {
+  width: 50%;
+}
+
+/* ws prwto pianetai to th */
+tr:nth-child(even) {
+  background: #fff;
+}
+
+tr:nth-child(odd) {
+  background: #eee;
+}
+
+.wrong-question {
+  margin: 10px 0 -15px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.correct {
+  color: #006600;
+}
+
+.wrong {
+  color: #c10000;
+}
+
+table.quiz-results {
+  margin-top: 25px;
+  width: 100%;
+}
+
+table.big-table {
+  font-size: 80%;
+}
+
+table.quiz-results th, table.quiz-results td {
+  width: 50%;
+  padding: 10px;
+}
+
+#wrong-container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#wrong-container ul li {
+  margin-bottom: 50px;
+}
+
+i.fa {
+  float: right;
+}
+
+i.fa.fa-check-circle {
+  color: #006600;
+}
+
+i.fa.fa-times-circle {
+  color: #c10000;
 }
 
 .tdqn {
@@ -734,14 +789,14 @@ ul li p {
 }
 
 .start-button {
-  background-image: url('../images/start_button.png');
-  background-repeat: no-repeat;
-  background-color: transparent;
+  font-family: "FontAwesome";
+  content: "\f058";
   width: 20px;
   height: 20px;
   border: none;
   margin: 0;
   padding: 0;
+  background: red;
 }
 
 .flash-error li {
@@ -786,6 +841,18 @@ select {
 .credits {
   font-family: 'Ubuntu', 'Trebuchet MS', Arial, Verdana, Sans-serif;
   font-size: 110%;
+}
+
+ul.check-list {
+  margin: 0;
+  padding: 0;
+}
+
+ul.check-list li:before {
+  font-family: "FontAwesome";
+  content: "\f046";
+  color: #006600;
+  margin: 0;
 }
 
 /* show/hide */

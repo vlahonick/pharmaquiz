@@ -466,6 +466,15 @@
     padding-bottom: 12px;
   }
 
+  .tdqn {
+    text-align: left;
+  }
+
+  .tdqn form input[type="number"] {
+    width: 80%;
+    margin: 0;
+  }
+
   .results-buttons {
     width: 25%;
   }

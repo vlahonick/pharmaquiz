@@ -143,7 +143,12 @@ article, aside, details, footer, header, menu, nav, section {
   padding-right: 2px;
   line-height: 52px;
   background: url('../images/nav-border.png') no-repeat right 0;
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: -1px;
+}
+
+#navigation ul li.last {
+  background: none;
 }
 
 #navigation ul li a {
@@ -529,10 +534,10 @@ article, aside, details, footer, header, menu, nav, section {
   margin-top: -9px;
 }
 
-/* ------------------------------------------------ */
-/* ------------------Custom CSS-------------------- */
 
-/* quiz css */
+/* ------------------------------------------------ */
+/* ------------------   Quiz   -------------------- */
+/* ------------------------------------------------ */
 .question > label {
   font-weight: bold;
   font-size: 16px;
@@ -559,13 +564,20 @@ a.button {
   display: inline-block;
   min-width: 12%;
   text-decoration: none;
+  text-align: center;
 }
-/* end of quiz css */
 
-/* contact css */
+
+/* ------------------------------------------------ */
+/* -----------------   Contact   ------------------ */
+/* ------------------------------------------------ */
 #ty, .flash-success {
   font-weight: bold;
-  color: green;
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 #contact {
@@ -623,6 +635,16 @@ select {
 }
 /* end of contact css */
 
+.quiz-bread {
+  font-weight: bold;
+  padding: 2px 5px;
+  background: #eee;
+  font-size: 12px;
+}
+
+/* ------------------------------------------------ */
+/* -------------------   Tables   ----------------- */
+/* ------------------------------------------------ */
 table {
   width: 100%;
 }
@@ -641,11 +663,11 @@ table#quiz-categories td, table#quiz-categories th {
 }
 
 /* ws prwto pianetai to th */
-tr:nth-child(even) {
+tr:nth-child(odd) {
   background: #fff;
 }
 
-tr:nth-child(odd) {
+tr:nth-child(even) {
   background: #eee;
 }
 
@@ -663,18 +685,46 @@ tr:nth-child(odd) {
   color: #c10000;
 }
 
+._quiz_results ul li:before {
+  display: none;
+}
+
+._quiz_results ul li {
+  margin-bottom: 25px;
+}
+
+.score-correct-answers-results span {
+  color: #444;
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.score-correct-answers-results {
+  margin-bottom: 25px;
+}
+
+.wrong-question-title {
+  margin: 10px 0 -15px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
 table.quiz-results {
   margin-top: 25px;
   width: 100%;
 }
 
-table.big-table {
-  font-size: 80%;
-}
-
 table.quiz-results th, table.quiz-results td {
   width: 50%;
   padding: 10px;
+}
+
+table.quiz-results th span {
+  font-weight: bold;
 }
 
 #wrong-container ul {
@@ -729,16 +779,6 @@ ol li {
 
 p {
   text-align: justify;
-}
-
-
-.short-description {
-  font-size: 14px;
-  background: #f1f1f1;
-  padding: 20px;
-  margin: 0 15px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px #ccc;
 }
 
 .small-font {
@@ -855,7 +895,9 @@ ul.check-list li:before {
   margin: 0;
 }
 
-/* show/hide */
+/* ------------------------------------------------ */
+/* -----------------   Show/Hide   ---------------- */
+/* ------------------------------------------------ */
 #show {
   margin-top: 10px;
   padding-top: 10px;
@@ -871,4 +913,75 @@ ul.check-list li:before {
 #show:target #open {
   display: none;
 }
-/* end of show/hide */
+
+/* ------------------------------------------------ */
+/* ------------Pure CSS responsive memu------------ */
+/* ------------------------------------------------
+.toggle, [id^=drop] {
+  display: none;
+}
+
+.toggle + a, .menu {
+  display: none;
+}
+
+.toggle {
+  display: block;
+  background: #222;
+  padding: 0 20px;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background-color: #000000;
+}
+
+[id^=drop]:checked + ul {
+  display: block;
+}
+
+  nav ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul .toggle, nav ul ul a {
+  padding: 0 40px;
+}
+
+nav ul ul ul a {
+  padding: 0 80px;
+}
+
+nav a:hover, nav ul ul ul a {
+  background-color: #000000;
+}
+
+nav ul li ul li .toggle, nav ul ul a {
+  background-color: #212121;
+}
+
+nav ul ul {
+  float: none;
+  position: static;
+  color: #ffffff;
+}
+
+nav ul ul li:hover > ul, nav ul li:hover > ul {
+  display: none;
+}
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul ul li {
+  position: static;
+}
+*/

@@ -433,28 +433,6 @@
     text-decoration: none;
   }
 
-  .main .dots {
-    padding: 10px 0;
-  }
-
-  .main .post  {
-    padding-top: 28px;
-    padding-left: 20px;
-  }
-
-  .main .post .video-holder {
-    width: 280px;
-    height: 162px;
-    float: none;
-    display: block;
-    margin: 0 auto 20px;
-  }
-
-  .main .post .video-holder img {
-    width: 280px;
-    height: 162px;
-  }
-
   .main .post-cnt {
     float: none;
     display: block;

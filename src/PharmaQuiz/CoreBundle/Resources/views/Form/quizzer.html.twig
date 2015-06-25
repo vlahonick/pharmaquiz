@@ -2,7 +2,7 @@
 {% form_theme form 'PharmaQuizCoreBundle:Form:field_errors.html.twig' %}
 
 {% block main %}
-    <div class="dots"><span>{{ subtitle }}</span></div>
+    <div class="quiz-bread"><span>{{ subtitle }}</span></div>
     {{ form_start(form, { 'attr': {'class': 'quiz-form'} }) }}
         {{ form_errors(form) }}
         {% for key, element in form %}

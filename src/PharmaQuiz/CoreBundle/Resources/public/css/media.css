@@ -444,13 +444,8 @@
     padding-bottom: 12px;
   }
 
-  .tdqn {
-    text-align: left;
-  }
-
   .tdqn form input[type="number"] {
-    width: 80%;
-    margin: 0;
+    width: 100%;
   }
 
   .results-buttons {

@@ -30,16 +30,10 @@
                     </header>
                     <!-- end of header -->
                     <!-- navigation -->
-                    <nav id="navigation">
-                        {% set menu = knp_menu_get('PharmaQuizCoreBundle:Builder:mainMenu') %}
-                        <a href="#" class="nav-btn">
-                          {% if (menu.currentItem) %}
-                            {{ menu.currentItem.getLabel() }}
-                          {% else %}
-                            {{ title }}
-                          {% endif %}
-                          <span class="arr"></span></a>
-                        {{ knp_menu_render(menu, {'currentClass': 'active'}) }}
+                    <nav>
+                      <label for="drop" class="toggle">MENU <i style="margin-top: 20px;" class="fa fa-bars"></i></label>
+                      <input type="checkbox" id="drop" />
+                      {{ knp_menu_render('PharmaQuizCoreBundle:Builder:mainMenu', {'currentClass': 'active'}) }}
                     </nav>
                     <!-- end of navigation -->
 
@@ -64,9 +58,9 @@
                     <div id="footer">
                         {% include 'PharmaQuizCoreBundle:Default:footer_cols.html.twig' %}
                         <div class="footer-bottom">
-                          <nav class="footer-nav">
+                          <div class="footer-nav">
                               {{ knp_menu_render('PharmaQuizCoreBundle:Builder:footerMenu', {'currentClass': 'active'}) }}
-                          </nav>
+                          </div>
                           {% include 'PharmaQuizCoreBundle:Default:footer_copyright.html.twig' %}
                         </div>
                     </div>

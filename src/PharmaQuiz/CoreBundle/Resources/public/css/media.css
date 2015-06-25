@@ -519,6 +519,80 @@
     display: none;
   }
 
+/* ------------------------------------------------ */
+/* ------------Pure CSS responsive memu------------ */
+/* ------------------------------------------------ */
+  nav {
+    margin: 0;
+  }
+
+  .toggle + a, .menu {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+    background: #222;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 60px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle:hover {
+    background: #000;;
+  }
+
+  [id^=drop]:checked + ul {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul {
+    float: none;
+  }
+
+  nav ul ul .toggle, nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav a:hover, nav ul ul ul a {
+    background: #000;
+  }
+
+  nav ul li ul li .toggle, nav ul ul a {
+    background-color: #212121;
+  }
+
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+  }
+
+  nav ul ul li:hover > ul, nav ul li:hover > ul {
+    display: none;
+  }
+
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+  }
 }
 
 @media only screen and ( max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)  {

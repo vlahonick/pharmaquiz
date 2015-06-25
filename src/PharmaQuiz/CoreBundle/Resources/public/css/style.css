@@ -153,10 +153,6 @@ article, aside, details, footer, header, menu, nav, section {
   color: #2b9208;
 }
 
-.active {
-  color: #ff000 !important;
-}
-
 #navigation ul li.first a {
   padding-left: 38px;
 }
@@ -646,7 +642,7 @@ th, td {
 }
 
 th {
-  background: #333;
+  background: #222;
   color: #fff;
   text-align: left;
 }
@@ -694,11 +690,13 @@ tr:nth-child(even) {
 }
 
 .score-correct-answers-results span {
-  color: #444;
+  color: #222;
   display: block;
   margin-top: 5px;
   font-weight: bold;
   font-size: 24px;
+  padding: 10px;
+  background: #eee;
 }
 
 .score-correct-answers-results {
@@ -917,72 +915,81 @@ ul.check-list li:before {
 
 /* ------------------------------------------------ */
 /* ------------Pure CSS responsive memu------------ */
-/* ------------------------------------------------
-.toggle, [id^=drop] {
-  display: none;
-}
-
-.toggle + a, .menu {
-  display: none;
-}
-
-.toggle {
-  display: block;
+/* ------------------------------------------------ */
+nav {
+  clear: both;
+  margin: 0;
+  padding: 0;
   background: #222;
-  padding: 0 20px;
-  color: #FFF;
-  font-size: 20px;
-  line-height: 60px;
+  font-family: 'Ubuntu', Verdana, Sans-serif;
+}
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav ul {
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  margin: 0;
+  display: inline-block;
+  float: left;
+  background: #222;
+}
+
+nav a {
+  display: block;
+  padding: 0 35px;
+  color: #fff;
   text-decoration: none;
-  border: none;
-  cursor: pointer;
+  font-size: 18px;
+  line-height: 60px;
 }
 
-.toggle:hover {
-  background-color: #000000;
-}
-
-[id^=drop]:checked + ul {
-  display: block;
-}
-
-  nav ul li {
-  display: block;
-  width: 100%;
-}
-
-nav ul ul .toggle, nav ul ul a {
-  padding: 0 40px;
-}
-
-nav ul ul ul a {
-  padding: 0 80px;
-}
-
-nav a:hover, nav ul ul ul a {
-  background-color: #000000;
-}
-
-nav ul li ul li .toggle, nav ul ul a {
-  background-color: #212121;
+nav a:hover, nav ul li ul li:hover, nav ul li.active, nav ul li ul li .active {
+  background: #000;
+  text-decoration: none;
 }
 
 nav ul ul {
-  float: none;
-  position: static;
-  color: #ffffff;
+  display: none;
+  position: absolute;
+  top: 60px;
 }
 
-nav ul ul li:hover > ul, nav ul li:hover > ul {
-  display: none;
+nav ul li:hover > ul {
+  display: inherit;
 }
 
 nav ul ul li {
-  display: block;
-  width: 100%;
+  width: 300px;
+  float: none;
+  display: list-item;
+  position: relative;
 }
 
 nav ul ul ul li {
-  position: static;
+  position: relative;
+  top: -60px;
+  left: 300px;
 }
-*/
+
+li > a:after {
+  content: ' +';
+}
+
+li > a:only-child:after {
+  content: '';
+}
+
+.toggle, [id^=drop] {
+ display: none;
+}

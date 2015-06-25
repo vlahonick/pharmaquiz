@@ -49,7 +49,7 @@
                     <!-- main -->
                     <div class="main">
 
-                    {% if app.request.attributes.get('_home') == 'home' %}
+                    {% if app.request.attributes.get('_route') == '_home' %}
                       {% include 'PharmaQuizCoreBundle:Default:stats.html.twig' %}
                     {% endif %}
 

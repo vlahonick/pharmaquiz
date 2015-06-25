@@ -228,8 +228,8 @@
     padding: 0 3px;
   }
 
-  .search {
-    display: none;
+  .stats ul li {
+    display: block;
   }
 
   #navigation {

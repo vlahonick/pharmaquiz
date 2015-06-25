@@ -2,36 +2,40 @@
 
 {% block main %}
 
-  <table>
-    <tr>
-      <th>{% trans %}Topic{% endtrans %}:</th>
-      <th class="tdqn">{% trans %}Questions number{% endtrans %}:</th>
-    </tr>
+  <table id="quiz-selection">
+    <thead>
+      <tr>
+        <th>{% trans %}Topic{% endtrans %}:</th>
+        <th class="tdqn">{% trans %}Questions number{% endtrans %}:</th>
+      </tr>
+    </thead>
 
-    <tr>
-      <td>{% trans %}Questions from all topics{% endtrans %}</td>
-      <td class="tdac">
-        <form method="get" action="{{ path('_quiz_all') }}">
-          <input type="number" name="questions" min="1" max="50" required="required" />
-          <input type="submit" value="  " class="start-button" />
-        </form>
-      </td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>{% trans %}Questions from all topics{% endtrans %}</td>
+        <td class="tdqn">
+          <form method="get" action="{{ path('_quiz_all') }}">
+            <input type="number" name="questions" min="1" max="50" required="required" placeholder="{% trans %}Enter number...{% endtrans %}" />
+            <input type="submit" value="GO" class="start-button" />
+          </form>
+        </td>
+      </tr>
 
-    {% for category in categories %}
-    {% if (app.request.attributes.get('_locale') == 'ro' and category.getId() != 12) or category.getId() == 1 or category.getId() == 2 or category.getId() == 3 or category.getId() == 4 or category.getId() == 5 or category.getId() == 6 or category.getId() == 7 or category.getId() == 8 or category.getId() == 9 or category.getId() == 10 %}
-    <tr>
-      <td>{{ category.getTitle() }}</td>
-      <td class="tdqn">
-        <form method="get" action="{{ path('_quiz_category', {'category': category.getId()}) }}">
-          <input type="number" name="questions" min="1" max="50" required="required" placeholder="{% trans %}Enter number...{% endtrans %}" />
-          <input type="submit" value=" " class="start-button" />
-        </form>
-      </td>
-    </tr>
-    {% endif %}
-    {% endfor %}
+      {% for category in categories %}
+      {% if (app.request.attributes.get('_locale') == 'ro' and category.getId() != 12) or category.getId() == 1 or category.getId() == 2 or category.getId() == 3 or category.getId() == 4 or category.getId() == 5 or category.getId() == 6 or category.getId() == 7 or category.getId() == 8 or category.getId() == 9 or category.getId() == 10 %}
 
+      <tr>
+        <td>{{ category.getTitle() }}</td>
+        <td class="tdqn">
+          <form method="get" action="{{ path('_quiz_category', {'category': category.getId()}) }}">
+            <input type="number" name="questions" min="1" max="50" required="required" placeholder="{% trans %}Enter number...{% endtrans %}" />
+            <input type="submit" value="GO" class="start-button" />
+          </form>
+        </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </tbody>
   </table>
 {% include 'PharmaQuizCoreBundle:Default:quiz_help.html.twig' %}
 {% endblock %}

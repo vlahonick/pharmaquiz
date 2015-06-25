@@ -654,15 +654,23 @@ th, td {
 }
 
 th {
-  background: #aaa;
+  background: #333;
   color: #fff;
+  text-align: left;
+}
+
+table#quiz-selection th, table#quiz-selection td {
+  padding: 10px;
 }
 
 table#quiz-categories td, table#quiz-categories th {
   width: 50%;
 }
 
-/* ws prwto pianetai to th */
+table#quiz-selection tr {
+  background: #eee;
+}
+
 tr:nth-child(odd) {
   background: #fff;
 }
@@ -712,7 +720,6 @@ tr:nth-child(even) {
 }
 
 
-
 table.quiz-results {
   margin-top: 25px;
   width: 100%;
@@ -749,13 +756,9 @@ i.fa.fa-times-circle {
   color: #c10000;
 }
 
-.tdqn {
-  text-align: center;
-}
-
 .tdqn form input[type="number"] {
   min-width: 65%;
-  margin-left: 15px;
+
 }
 
 ol {
@@ -822,15 +825,15 @@ ul li p {
 }
 
 .start-button {
-  font-family: "FontAwesome";
-  content: "\f058";
-  width: 20px;
+  width: 32px;
   height: 20px;
   border: none;
-  margin: 0;
+  border-radius: 10px;
+  margin: 0 0 0 5px;
   padding: 0;
-  background: red;
+  background: #0081c3;
 }
+
 
 .flash-error li {
   padding-left: 0 !important;

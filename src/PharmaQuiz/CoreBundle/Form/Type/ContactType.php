@@ -32,10 +32,8 @@ class ContactType extends AbstractType
             ->add('subject', 'choice', array(
                 'label' => 'Subject *',
                 'choices' => array(
-                    'info' => 'Inaccurate information',
-                    'bug' => 'Bug',
-                    'copyrights' => 'Copyright',
-                    'volunteer' => 'Help',
+                    'info' => 'Typo or inaccurate info',
+                    'bug' => 'Website bug',
                     'other' => 'Other',
                 ),
             ))

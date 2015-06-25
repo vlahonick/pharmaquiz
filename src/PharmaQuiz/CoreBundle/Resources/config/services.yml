@@ -1,0 +1,61 @@
+parameters:
+#    pharma_quiz_core.example.class: PharmaQuiz\CoreBundle\Example
+
+services:
+#    pharma_quiz_core.example:
+#        class: %pharma_quiz_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    pharma_quiz_core.admin.page:
+        class: PharmaQuiz\CoreBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Page" }
+        arguments:
+            - ~
+            - PharmaQuiz\CoreBundle\Entity\Page
+            - ~
+        calls:
+            - [ setTranslationDomain, [PharmaQuizCoreBundle]]
+    pharma_quiz_core.admin.quiz_question:
+        class: PharmaQuiz\CoreBundle\Admin\QuizQuestionAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Quiz questions" }
+        arguments:
+            - ~
+            - PharmaQuiz\CoreBundle\Entity\QuizQuestion
+            - ~
+        calls:
+            - [ setTranslationDomain, [PharmaQuizCoreBundle]]
+    pharma_quiz_core.admin.quiz_answer:
+        class: PharmaQuiz\CoreBundle\Admin\QuizAnswerAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Quiz answers" }
+        arguments:
+            - ~
+            - PharmaQuiz\CoreBundle\Entity\QuizAnswer
+            - ~
+        calls:
+            - [ setTranslationDomain, [PharmaQuizCoreBundle]]
+    pharma_quiz_core.admin.quiz_category:
+        class: PharmaQuiz\CoreBundle\Admin\QuizCategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Quiz categories" }
+        arguments:
+            - ~
+            - PharmaQuiz\CoreBundle\Entity\QuizCategory
+            - ~
+        calls:
+            - [ setTranslationDomain, [PharmaQuizCoreBundle]]
+    pharma_quiz_core.admin.definition:
+        class: PharmaQuiz\CoreBundle\Admin\DefinitionAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Definitions" }
+        arguments:
+            - ~
+            - PharmaQuiz\CoreBundle\Entity\Definition
+            - ~
+        calls:
+            - [ setTranslationDomain, [PharmaQuizCoreBundle]]
+    quote_factory:
+        class: PharmaQuiz\CoreBundle\QuoteFactory
+        arguments:
+          - @translator

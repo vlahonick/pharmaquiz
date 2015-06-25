@@ -1,0 +1,44 @@
+_home:
+    pattern:  /{_locale}
+    defaults: { _controller: PharmaQuizCoreBundle:Default:home, _locale: en }
+_contact:
+    pattern:  /{_locale}/contact
+    defaults: { _controller: PharmaQuizCoreBundle:Default:contact, _locale: en }
+    requirements:
+        _locale: en|el|ro
+_dictionary:
+    pattern:  /{_locale}/dictionary
+    defaults: { _controller: PharmaQuizCoreBundle:Default:dictionary, _locale: en }
+    requirements:
+        _locale: en|el|ro
+_quiz:
+    pattern:  /{_locale}/quiz
+    defaults: { _controller: PharmaQuizCoreBundle:Quiz:quiz, _locale: en }
+    requirements:
+        _locale: en|el|ro
+_quiz_results:
+    pattern:  /{_locale}/quiz/results
+    defaults: { _controller: PharmaQuizCoreBundle:Quiz:quizResults, _locale: en }
+    requirements:
+        _locale: en|el|ro
+_quiz_all:
+    pattern:  /{_locale}/quiz/all
+    defaults: { _controller: PharmaQuizCoreBundle:Quiz:quizAll, _locale: en }
+    requirements:
+        _locale: en|el|ro
+_quiz_category:
+    pattern:  /{_locale}/quiz/{category}
+    defaults: { _controller: PharmaQuizCoreBundle:Quiz:quizCategory, _locale: en }
+    requirements:
+        _locale: en|el|ro
+        category: \d+
+_quiz_question_add:
+    pattern:  /{_locale}/add-question
+    defaults: { _controller: PharmaQuizCoreBundle:Quiz:addQuestion, _locale: en }
+    requirements:
+        _locale: en|el|ro
+_page:
+    pattern:  /{_locale}/{slug}
+    defaults: { _controller: PharmaQuizCoreBundle:Default:page, _locale: en }
+    requirements:
+        _locale: en|el|ro

@@ -1,0 +1,60 @@
+<!-- slider -->
+<div class="m-slider">
+  <div class="slider-holder">
+    <span class="slider-shadow"></span>
+    <span class="slider-b"></span>
+    <div class="slider flexslider">
+      <ul class="slides">
+        <li>
+          <div class="img-holder">
+            <img src="{{ asset('bundles/pharmaquizcore/images/slide_question_mark.png') }}" alt="" />
+          </div>
+          <div class="slide-cnt">
+            <h2>PharmaQuiz</h2>
+            <div class="box-cnt">
+              <p>
+              {% trans %}
+              A website dedicated to pharmacy quizzes has finaly arrived! Many questions, great design! Test your knowledge now!
+              {% endtrans %}
+              </p>
+            </div>
+            <a href="{{ path('_quiz') }}" class="grey-btn">{% trans %}Start Quiz{% endtrans %}</a>
+          </div>
+        </li>
+        <li>
+          <div class="img-holder">
+            <img src="{{ asset('bundles/pharmaquizcore/images/slide_questions_' ~ app.request.locale ~ '.png') }}" alt="" />
+          </div>
+          <div class="slide-cnt">
+            <h2>{% trans %}Topics variety{% endtrans %}</h2>
+            <div class="box-cnt">
+              <p>
+              {% trans %}
+              We add constantly new topics and questions. Our database has already more than 500 questions and this is only the beginning!
+              {% endtrans %}
+              </p>
+            </div>
+            <a href="{{ path('_quiz') }}" class="grey-btn">{% trans %}Start Quiz{% endtrans %}</a>
+          </div>
+        </li>
+        <li>
+          <div class="img-holder">
+            <img src="{{ asset('bundles/pharmaquizcore/images/slide_pie_chart.png') }}" alt="" />
+          </div>
+          <div class="slide-cnt">
+            <h2>{% trans %}Smart design{% endtrans %}</h2>
+            <div class="box-cnt">
+              <p>
+              {% trans %}
+              The wide variety of topics we want to offer you will lose all of its value without providing a beautiful visual environment!
+              {% endtrans %}
+              </p>
+            </div>
+            <a href="{{ path('_quiz') }}" class="grey-btn">{% trans %}Start Quiz{% endtrans %}</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end of slider -->

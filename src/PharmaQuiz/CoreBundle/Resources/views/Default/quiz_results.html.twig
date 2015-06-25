@@ -1,0 +1,57 @@
+{% extends '::base.html.twig' %}
+
+{% block main %}
+    <div id="quiz-results"
+      data-title="{{ title }}"
+      data-questions-label="{% trans %}Questions{% endtrans %}"
+      data-correct-label="{% trans %}Correct{% endtrans %}"
+      data-wrong-label="{% trans %}Wrong{% endtrans %}"
+      data-final-score="{{ final_score|round(0) }}">
+    </div>
+    <h2>{% trans %}Score{% endtrans %}: {{ final_score|round(0) }}/100 | {% trans %}Correct answers{% endtrans %} {{ total_correct }}/{{ number_of_questions }}</h2>
+
+    {% if corrections is not empty %}
+    <h3><span style="color: #ff0000;">{% trans %}Wrong answers{% endtrans %}:</span></h3>
+
+    <ul>
+    {% for index, correction in corrections %}
+      <li>
+        <div style="margin: 10px 0 -15px 0; font-size: 16px;">{{ index }}. {{ correction.title | raw('html') }}</div>
+        <table class="quiz-results">
+          <thead>
+            <tr>
+              <th style="width:50%"><span style="color: red;">{% trans %}Your answer{% endtrans %}: </span></td>
+              <th style="width:50%"><span style="color: green;">{% trans %}Correct answer{% endtrans %}: </span></td>
+            </tr>
+          </thead>
+          <tbody>
+            {% set maxRows = max(correction.wrong|length, correction.correct|length) - 1 %}
+
+            {% for key in 0..maxRows %}
+              <tr>
+                <td style="width:50%">
+                  {% if attribute(correction.wrong, key) is defined %}
+                    {{ attribute(correction.wrong, key) | raw('html') }}
+                  {% endif %}
+                </td>
+                <td style="width:50%">
+                  {% if attribute(correction.correct, key) is defined %}
+                    {{ attribute(correction.correct, key) | raw('html') }}
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+      </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+    <center>
+      <a href="{{ retry_path }}" class="button results-buttons">{% trans %}Try again{% endtrans %}</a>
+      <a href="{{ path('_quiz') }}" class="button results-buttons" style="margin-left: 10px;">{% trans %}Quiz Menu{% endtrans %}</a>
+    </center>
+
+{% endblock %}

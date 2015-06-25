@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+{% form_theme form 'PharmaQuizCoreBundle:Form:field_errors.html.twig' %}
+
+{% block main %}
+    <div class="dots"><span>{{ subtitle }}</span></div>
+    {{ form_start(form, { 'attr': {'class': 'quiz-form'} }) }}
+        {{ form_errors(form) }}
+        {% for key, element in form %}
+            {% if 'question' in key %}
+              <div class="question">
+                {{ form_label(element) }}
+                {{ form_errors(element) }}
+                {% for answer in element %}
+                  <div class="answer">
+                    {{ form_widget(answer) }}
+                    <label for="{{ answer.vars.id }}" class="label-inline">{{ answer.vars.label | raw('html') }}</label>
+                    {{ form_errors(answer) }}
+                  </div>
+                {% endfor %}
+                <div id="error" class="required-message" style="display:none;">
+                  <strong>{% trans %}Answer the question to go to the next one{% endtrans %}</strong>
+                </div>
+                <a class="button fake-button" style="display:none;">{% trans %}Next question{% endtrans %}</a>
+              </div>
+            {% else %}
+                {{ form_widget(element) }}
+            {% endif %}
+        {% endfor %}
+    {{ form_end(form) }}
+    <script type="text/javascript">
+      document.getElementById('quiz_questions_send').style.display = 'none';
+      var nodeList = document.querySelectorAll('.question');
+      for (var i = 0; i < nodeList.length; i++) {
+        if (i !== 0) {
+          nodeList[i].style.display = 'none';
+        }
+      }
+    </script>
+
+    {% include 'PharmaQuizCoreBundle:Default:quiz_help.html.twig' %}
+{% endblock %}

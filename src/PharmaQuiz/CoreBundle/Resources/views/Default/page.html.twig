@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block main %}
+
+  <section class="post">
+    {{ content | raw('html') }}
+  </section>
+
+{% endblock %}

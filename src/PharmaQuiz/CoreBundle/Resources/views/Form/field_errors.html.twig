@@ -1,0 +1,39 @@
+{% block field_errors %}
+{% spaceless %}
+{% if errors|length > 0 %}
+<ul class="form-error-list flash-error">
+    {% for error in errors %}
+    {% set count = 0 %}
+    {% if attribute(error.messageParameters, '{{ limit }}') is not null %}
+      {% set count = attribute(error.messageParameters, '{{ limit }}') %}
+    {% endif %}
+    {% if count is not empty %}
+        <li>{{ error.messageTemplate|transchoice(count, error.messageParameters, 'validators') }}</li>
+    {% else %}
+        <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+{% endspaceless %}
+{% endblock field_errors %}
+
+{% block form_errors %}
+{% spaceless %}
+{% if errors|length > 0 %}
+<ul class="form-error-list flash-error">
+    {% for error in errors %}
+    {% set count = 0 %}
+    {% if error.messageParameters is not empty and attribute(error.messageParameters, '{{ limit }}') is not null %}
+      {% set count = attribute(error.messageParameters, '{{ limit }}') %}
+    {% endif %}
+    {% if count is not empty %}
+        <li>{{ error.messageTemplate|transchoice(count, error.messageParameters, 'validators') }}</li>
+    {% else %}
+        <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+{% endspaceless %}
+{% endblock form_errors %}

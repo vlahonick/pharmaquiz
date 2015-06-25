@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+        <title>{% block title %}{{ title | striptags }}{% endblock %} | PharmaQuiz.org</title>
+        <meta name="author" content="Netit Solutions & root@wc">
+        <meta name="description" content="{% trans %}PharmaQuiz - A website dedicated in Pharmacy Quizzes!{% endtrans %}">
+        {% block stylesheets %}
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        {% stylesheets 'bundles/pharmaquizcore/css/style.css' 'bundles/pharmaquizcore/css/*.css' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="{{ app.request.get('_route') }}">
+        {% block body %}
+        <div id="wrapper">
+            <!-- shell -->
+            <div class="shell">
+                <!-- container -->
+                <div class="container">
+                    <!-- header -->
+                    <header id="header">
+                        <a href="{{ path('_home') }}">
+                            <img id="logo" src="{{ asset('bundles/pharmaquizcore/images/pharmaquiz_logo.jpg') }}" alt=""/>
+                        </a>
+                        {% include 'PharmaQuizCoreBundle:Default:language_switcher.html.twig' %}
+                    </header>
+                    <!-- end of header -->
+                    <!-- navigation -->
+                    <nav id="navigation">
+                        {% set menu = knp_menu_get('PharmaQuizCoreBundle:Builder:mainMenu') %}
+                        <a href="#" class="nav-btn">
+                          {% if (menu.currentItem) %}
+                            {{ menu.currentItem.getLabel() }}
+                          {% else %}
+                            {{ title }}
+                          {% endif %}
+                          <span class="arr"></span></a>
+                        {{ knp_menu_render(menu, {'currentClass': 'active'}) }}
+                    </nav>
+                    <!-- end of navigation -->
+
+                    {% block slider %}
+                    {% endblock %}
+
+                    <!-- main -->
+                    <div class="main">
+                        {% include 'PharmaQuizCoreBundle:Default:messages.html.twig' %}
+
+                        <h1>{{ title | raw('html') }}</h1>
+                        {% block main %}
+                        {% endblock %}
+                    </div>
+                    <!-- end of main -->
+
+                    <div id="footer">
+                        {% include 'PharmaQuizCoreBundle:Default:footer_cols.html.twig' %}
+                        <div class="footer-bottom">
+                          <nav class="footer-nav">
+                              {{ knp_menu_render('PharmaQuizCoreBundle:Builder:footerMenu', {'currentClass': 'active'}) }}
+                          </nav>
+                          {% include 'PharmaQuizCoreBundle:Default:footer_copyright.html.twig' %}
+                        </div>
+                    </div>
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- end of shell -->
+        </div>
+        {% endblock %}
+        {% block javascripts %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        {% javascripts '@PharmaQuizCoreBundle/Resources/public/js/highcharts.js' '@PharmaQuizCoreBundle/Resources/public/js/*' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% endblock %}
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-59513926-6', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>

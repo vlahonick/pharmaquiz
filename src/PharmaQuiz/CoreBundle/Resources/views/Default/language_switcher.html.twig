@@ -1,0 +1,26 @@
+{% set routeParams = app.request.get('_route_params') %}
+<!-- languages -->
+<ul class="lang-menu">
+    {% for language in ['en', 'el', 'ro'] %}
+        {% if app.request.locale == language %}
+        <li class="langue-current langue-current-{{language}}">
+          <img src="{{ asset('bundles/pharmaquizcore/images/flags/'~language~'.png') }}" alt="{{language}}"/>
+        </li>
+        {% else %}
+
+        {% set routeParams = routeParams|merge({'_locale': language}) %}
+
+        <li class="langue-available langue-available-{{language}}">
+          {% if app.request.query.get('questions') is empty %}
+          <a href="{{ path(app.request.get('_route'), routeParams) }}">
+          {% else %}
+          <a href="{{ path(app.request.get('_route'), routeParams) }}?questions={{ app.request.query.get('questions') }}">
+          {% endif %}
+            <img src="{{ asset('bundles/pharmaquizcore/images/flags/'~language~'_grey.png') }}" alt="{{language}}"/>
+          </a>
+        </li>
+
+        {% endif %}
+    {% endfor %}
+</ul>
+<!-- end of languages -->

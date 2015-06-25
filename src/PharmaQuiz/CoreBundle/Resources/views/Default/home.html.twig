@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block slider %}
+{% include 'PharmaQuizCoreBundle:Default:slider.html.twig' %}
+{% endblock %}
+
+{% block main %}
+<section class="post">
+  {{ content | raw('html') }}
+</section>
+{% endblock %}

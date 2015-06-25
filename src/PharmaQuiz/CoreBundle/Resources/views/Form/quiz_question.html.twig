@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+{% form_theme form 'PharmaQuizCoreBundle:Form:field_errors.html.twig' %}
+
+{% block main %}
+
+<h4>{% trans %}Instructions{% endtrans %}</h4>
+<ol style="margin: 0 0 -10px -25px;">
+  <li>{% trans %}Fill the form below by adding a question and the possible answers.{% endtrans %}</li>
+  <li>{% trans %}Pick topic from the dropdown list.{% endtrans %}</li>
+  <li>{% trans %}Check the box for the correct answers.{% endtrans %}</li>
+  <li>{% trans %}Send the question!{% endtrans %}</li>
+</ol>
+
+<h4>{% trans %}Quick Help{% endtrans %}</h4>
+<ul style="margin-bottom: 25px;">
+  <li>{% trans %}You can add questions with minimum 1 correct answer and maximum of 4.{% endtrans %}</li>
+  <li>{% trans %}Every question will be reviewed before publishing. Duplicates will be deleted.{% endtrans %}</li>
+  <li>{% trans %}If you want to send a question in another language, choose one of the available languages from the top right menu and send the question in the choosen language form.{% endtrans %}</li>
+</ul>
+
+    {{ form_start(form, { 'attr': {'class': 'quiz-question-form'} }) }}
+        {{ form_errors(form) }}
+        {% for key, element in form %}
+            {% if key == 'answers' %}
+              <ol class="edit-answers">
+                {{ form_errors(element) }}
+                {% for answer in element %}
+                  <li class="edit-answer">
+                    {% for subkey, subelement in answer %}
+                      <div class="{{ subkey }}">
+                      {{ form_label(subelement) }}
+                      {{ form_widget(subelement) }}
+                      {{ form_errors(subelement) }}
+                      </div>
+                    {% endfor %}
+                    {# form_label(answer) #}
+                    {{ form_errors(answer) }}
+                  </li>
+                {% endfor %}
+              </ol>
+            {% else %}
+                {{ form_row(element) }}
+            {% endif %}
+        {% endfor %}
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'A2lixTranslationFormBundle::default.html.twig' %}
+{% block a2lix_translations_widget %}
+    {{ parent() }}
+    {% javascripts '@A2lixTranslationFormBundle/Resources/public/js/a2lix_translation_default.js' %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+    {#
+    {% stylesheets '@A2lixTranslationFormBundle/Resources/public/css/a2lix_translation_default.css' %}
+        <link type="text/css" rel="stylesheet" media="all" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    #}
+{% endblock %}

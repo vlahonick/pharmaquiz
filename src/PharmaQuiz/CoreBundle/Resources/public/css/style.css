@@ -34,17 +34,6 @@ a img {
   border: 0;
 }
 
-a.more {
-  color: #2b9208;
-  text-decoration: underline;
-  padding-left: 11px;
-  background: url('../images/arr-ico.png') no-repeat 0 5px;
-}
-
-a.more:hover {
-  text-decoration: none;
-}
-
 label {
   margin-left: 5px;
 }

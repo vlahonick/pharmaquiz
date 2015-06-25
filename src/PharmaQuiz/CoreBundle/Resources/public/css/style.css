@@ -818,14 +818,7 @@ ul li p {
 
 .lang-menu li {
   display: inline-block;
-}
-
-.short-description ul li {
-  background-image: url('../images/green-mark.png');
-  background-repeat: no-repeat;
-  background-position: 0px -5px;
-  padding-left: 40px;
-  padding-top: 5px;
+  margin-left: 5px;
 }
 
 .start-button {
@@ -893,6 +886,18 @@ ul.check-list li:before {
   content: "\f046";
   color: #006600;
   margin: 0;
+}
+
+.stats {
+  background: #eee;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.stats ul li {
+  display: inline;
+  margin-right: 25px;
+  font-weight: bold;
 }
 
 /* ------------------------------------------------ */

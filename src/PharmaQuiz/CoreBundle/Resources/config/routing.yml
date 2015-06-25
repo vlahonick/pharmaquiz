@@ -6,11 +6,6 @@ _contact:
     defaults: { _controller: PharmaQuizCoreBundle:Default:contact, _locale: en }
     requirements:
         _locale: en|el|ro
-_dictionary:
-    pattern:  /{_locale}/dictionary
-    defaults: { _controller: PharmaQuizCoreBundle:Default:dictionary, _locale: en }
-    requirements:
-        _locale: en|el|ro
 _quiz:
     pattern:  /{_locale}/quiz
     defaults: { _controller: PharmaQuizCoreBundle:Quiz:quiz, _locale: en }
@@ -32,11 +27,6 @@ _quiz_category:
     requirements:
         _locale: en|el|ro
         category: \d+
-_quiz_question_add:
-    pattern:  /{_locale}/add-question
-    defaults: { _controller: PharmaQuizCoreBundle:Quiz:addQuestion, _locale: en }
-    requirements:
-        _locale: en|el|ro
 _page:
     pattern:  /{_locale}/{slug}
     defaults: { _controller: PharmaQuizCoreBundle:Default:page, _locale: en }

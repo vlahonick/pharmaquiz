@@ -72,36 +72,4 @@ class DefaultController extends Controller{
         );
         return $this->render('PharmaQuizCoreBundle:Form:contact.html.twig', $params);
     }
-
-
-    public function dictionaryAction()
-    {
-        $translator = $this->get('translator');
-        $em = $this->getDoctrine()->getManager();
-        $definitions = $em->getRepository('PharmaQuizCoreBundle:Definition')->findAll();
-        $data = array('numbers' => array(), 'english_letters' => array(), 'letters' => array());
-
-        // Split definitions to ones starting with number, starting with english
-        // letter and rest.
-        $numbers = range(0, 9);
-        $eng_letters = range('A', 'Z');
-        foreach ($definitions as $def) {
-          $key = mb_substr(ucfirst($def->getTitle()), 0, 1, 'utf-8');
-          if (is_numeric($key) && in_array((int) $key, $numbers, TRUE)) {
-            $data['numbers'][$key][] = $def;
-          }
-          elseif (in_array($key, $eng_letters)) {
-            $data['english_letters'][$key][] = $def;
-          }
-          else {
-            $data['letters'][$key][] = $def;
-          }
-        }
-        $params = array(
-            'title' => $translator->trans('Dictionary'),
-            'quote' => $this->get('quote_factory')->getRandom(),
-            'definitions' => $data,
-        );
-        return $this->render('PharmaQuizCoreBundle:Default:dictionary.html.twig', $params);
-    }
 }

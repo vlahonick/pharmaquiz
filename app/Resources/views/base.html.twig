@@ -46,11 +46,13 @@
                     {% block slider %}
                     {% endblock %}
 
-                    {% block stats %}
-                    {% endblock %}
-
                     <!-- main -->
                     <div class="main">
+
+                    {% if app.request.attributes.get('_home') == 'home' %}
+                      {% include 'PharmaQuizCoreBundle:Default:stats.html.twig' %}
+                    {% endif %}
+
                         {% include 'PharmaQuizCoreBundle:Default:messages.html.twig' %}
 
                         <h1>{{ title | raw('html') }}</h1>

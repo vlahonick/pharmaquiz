@@ -127,7 +127,7 @@ article, aside, details, footer, header, menu, nav, section {
 #navigation {
   height: 52px;
   padding-top: 4px;
-  font-family: 'Ubuntu', Verdana, Sans-serif;
+  font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
   font-weight: 700;
   background: url('../images/navigation.png') repeat-x 0 0;
   box-shadow: 0px -1px 2px rgba(0,0,0,0.1);
@@ -244,7 +244,7 @@ article, aside, details, footer, header, menu, nav, section {
   padding-bottom: 16px;
   color: #fff;
   text-shadow: rgba(0,0,0,0.4) 2px 3px;
-  font-family: 'Ubuntu', Verdana, Sans-serif;
+  font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
   font-weight: 700;
 }
 
@@ -290,7 +290,7 @@ article, aside, details, footer, header, menu, nav, section {
   color: #2d5900;
   line-height: 22px;
   padding: 25px 0 8px 0;
-  font-family: 'Ubuntu', Verdana, Sans-serif;
+  font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
   font-weight: 700;
 }
 
@@ -410,7 +410,7 @@ article, aside, details, footer, header, menu, nav, section {
 #footer h2 {
   font-size: 23px;
   color: #fff;
-  font-family: 'Ubuntu', Verdana, Sans-serif;
+  font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
   font-weight: 400;
   padding-bottom: 18px;
 }
@@ -432,20 +432,27 @@ article, aside, details, footer, header, menu, nav, section {
 .footer-cols .col ul {
   list-style: none;
   list-style-position: outside;
+  font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
 }
 
-.footer-cols .col ul li {
+.footer-cols .col ol li {
+  font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
+  margin: 0 0 0 24px;
+  padding: 0;
+}
+
+.footer-cols .col ul li, .footer-cols .col ol li {
   font-size: 14px;
-  color: #7dc33a;
+  color: #fff;
 }
 
 .footer-cols .col ul li:before {
   font-family: "FontAwesome";
   content: "\f105";
-  padding: 0 3px 0 5px;
+  padding: 0 5px;
 }
 
-.footer-cols .col ul li a {
+.footer-cols .col ul li a, .footer-cols .col ol li a {
   color: #7dc33a;
 }
 
@@ -549,7 +556,7 @@ a.button {
   font-size: 13px;
   border: 1px solid #fff;
   display: inline-block;
-  width: 12%;
+  min-width: 12%;
   text-decoration: none;
 }
 /* end of quiz css */
@@ -689,29 +696,18 @@ p {
   margin: 5px 0 5px 15px;
 }
 
-.dots {
-  background: url('../images/dots.png') repeat-x 50% 50%;
-  margin: auto;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Roboto', Arial, Sans-serif;
-}
-
-.dots span {
-  background: #fff; padding: 10px;
-}
-
-.dotsimg {
-  margin-bottom: -5px;
-}
-
 .scrot {
   border: 2px solid #ccc;
 }
 
 ul li p {
   margin: 5px 0;
+}
+
+.quote p {
+  color: #828282;
+  text-align: left;
+  font-style: italic;
 }
 
 .quote-author {
@@ -785,6 +781,11 @@ select {
 #quiz_question textarea {
   width: 80%;
   height: 250px;
+}
+
+.credits {
+  font-family: 'Ubuntu', 'Trebuchet MS', Arial, Verdana, Sans-serif;
+  font-size: 110%;
 }
 
 /* show/hide */

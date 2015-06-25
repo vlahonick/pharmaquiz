@@ -194,6 +194,10 @@
     width: auto;
   }
 
+  #wrapper {
+    padding: 0;
+  }
+
   .shell {
     width: 100%;
     margin: 0 auto;
@@ -479,6 +483,10 @@
   .footer-cols .col {
     width: 50%;
     padding-bottom: 22px;
+  }
+
+  .footer-cols .col:nth-child(3) {
+    clear: both;
   }
 
   .footer-cols .col + .col {

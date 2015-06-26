@@ -296,10 +296,6 @@ article, aside, details, footer, header, menu, nav, section {
   line-height: 30px;
 }
 
-._quiz_results .main h1 {
-  display: none;
-}
-
 .main h2 {
   font-size: 24px;
 }
@@ -311,14 +307,6 @@ article, aside, details, footer, header, menu, nav, section {
 .main h4 {
   font-size: 18px;
 }
-
-/*
-.main section {
-  clear: both;
-  background: url('../images/section-shadow.png') no-repeat center bottom;
-  padding: 0 20px 60px;
-}
-*/
 
 .main ul {
   list-style: none;
@@ -630,6 +618,23 @@ select {
   font-size: 12px;
 }
 
+.main form.quiz-form .question {
+  font-size: 16px;
+}
+
+.main form.quiz-form .question .answer {
+  margin: 3px 0;
+  padding: 10px;
+}
+
+.main form.quiz-form .question .answer:nth-child(odd) {
+  background: #eee;
+}
+
+.main form.quiz-form .question .answer:nth-child(even) {
+  background: #ddd;
+}
+
 /* ------------------------------------------------ */
 /* -------------------   Tables   ----------------- */
 /* ------------------------------------------------ */
@@ -664,11 +669,11 @@ table#quiz-selection tr {
 }
 
 tr:nth-child(odd) {
-  background: #fff;
+  background: #eee;
 }
 
 tr:nth-child(even) {
-  background: #eee;
+  background: #ddd;
 }
 
 .wrong-question {

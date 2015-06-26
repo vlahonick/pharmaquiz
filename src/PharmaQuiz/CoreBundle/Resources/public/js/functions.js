@@ -53,6 +53,10 @@
 
   var $results = $('#quiz-results');
   if ($results.length) {
+  // disables the export function for quiz results
+    exporting: {
+      enabled: false
+      }
     $results.highcharts({
       chart: {
         plotBackgroundColor: null,
@@ -76,16 +80,6 @@
             format: '<b>{point.name}</b>: {point.percentage:.0f} %'
           }
         }
-        /* Show in legend
-        pie: {
-          allowPointSelect: true,
-          cursor: 'pointer',
-          dataLabels: {
-            enabled: false
-          },
-          showInLegend: true
-        }
-        */
       },
       series: [{
         type: 'pie',

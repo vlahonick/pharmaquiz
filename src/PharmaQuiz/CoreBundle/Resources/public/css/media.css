@@ -534,6 +534,10 @@
     margin: 0;
   }
 
+  nav label.toggle i.fa {
+    float: right;
+  }
+
   .toggle {
     display: block;
     background: #222;

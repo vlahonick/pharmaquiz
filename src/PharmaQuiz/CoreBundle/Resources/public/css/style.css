@@ -969,14 +969,6 @@ nav a:hover, nav ul li.active {
   text-decoration: none;
 }
 
-li > a:after {
-  content: ' +';
-}
-
-li > a:only-child:after {
-  content: '';
-}
-
 .toggle, [id^=drop] {
  display: none;
 }

@@ -376,10 +376,6 @@ article, aside, details, footer, header, menu, nav, section {
   padding-bottom: 8px;
 }
 
-.main .post p strong {
-  display: block;
-}
-
 .main .post-cnt {
   float: right;
   width: 475px;
@@ -743,10 +739,6 @@ table.quiz-results th span {
   margin-bottom: 50px;
 }
 
-i.fa {
-  float: right;
-}
-
 i.fa.fa-check-circle {
   color: #006600;
 }
@@ -895,12 +887,21 @@ ul.check-list li:before {
   background: #eee;
   padding: 10px;
   border-radius: 6px;
+  margin-top: 15px;
 }
 
+.stats p {
+  font-size: 18px;
+  font-weight: bold;
+}
 .stats ul li {
   display: inline;
   margin-right: 25px;
   font-weight: bold;
+}
+
+.stats > ul li:before {
+  content: none;
 }
 
 /* ------------------------------------------------ */

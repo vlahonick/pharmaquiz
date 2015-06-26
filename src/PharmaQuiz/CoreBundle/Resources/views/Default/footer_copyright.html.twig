@@ -4,9 +4,8 @@
     </a>
     <span></span>
     <strong>
-        <a href="{{ path('_page', {'slug':'tos'}) }}" {% if app.request.attributes.get('slug') == 'tos' %}class="active"{% endif %}>{% trans %}Terms{% endtrans %}</a>
-        <span> | </span>
-        <a href="{{ path('_page', {'slug':'tos'}) }}" {% if app.request.attributes.get('slug') == 'tos' %}class="active"{% endif %}>{% trans %}Privacy{% endtrans %}</a>
+        <a href="{{ path('_page', {'slug':'tos'}) }}" {% if app.request.attributes.get('slug') == 'tos' %}class="active"{% endif %}>{% trans %}Terms{% endtrans %}</a> &amp;
+        <a href="{{ path('_page', {'slug':'tos'}) }}#privacy" {% if app.request.attributes.get('slug') == 'tos' %}class="active"{% endif %}>{% trans %}Privacy{% endtrans %}</a>
         <span> | </span>
         <a href="https://github.com/vlahonick/pharmaquiz" target="_blank" class="credits">GitHub</a>
         <span> | </span>

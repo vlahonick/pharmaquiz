@@ -15,7 +15,11 @@
         <td>{% trans %}Questions from all topics{% endtrans %}</td>
         <td class="tdqn">
           <form method="get" action="{{ path('_quiz_all') }}">
-            <input type="number" name="questions" min="1" max="50" required="required" placeholder="{% trans %}Enter number...{% endtrans %}" />
+            <input type="radio" name="questions" value="5" />5
+            <input type="radio" name="questions" value="10" />10
+            <input type="radio" name="questions" value="20" />20
+            <input type="radio" name="questions" value="30" />30
+            <input type="radio" name="questions" value="50" />50
             <input type="submit" value="GO" class="start-button" />
           </form>
         </td>
@@ -28,7 +32,11 @@
         <td>{{ category.getTitle() }}</td>
         <td class="tdqn">
           <form method="get" action="{{ path('_quiz_category', {'category': category.getId()}) }}">
-            <input type="number" name="questions" min="1" max="50" required="required" placeholder="{% trans %}Enter number...{% endtrans %}" />
+            <input type="radio" name="questions" value="5" />5
+            <input type="radio" name="questions" value="10" />10
+            <input type="radio" name="questions" value="20" />20
+            <input type="radio" name="questions" value="30" />30
+            <input type="radio" name="questions" value="50" />50
             <input type="submit" value="GO" class="start-button" />
           </form>
         </td>

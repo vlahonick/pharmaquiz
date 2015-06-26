@@ -651,6 +651,10 @@ table#quiz-selection th, table#quiz-selection td {
   padding: 10px;
 }
 
+table#quiz-selection form input[type="radio"] {
+  margin-left: 5px;
+}
+
 table#quiz-categories td, table#quiz-categories th {
   width: 50%;
 }

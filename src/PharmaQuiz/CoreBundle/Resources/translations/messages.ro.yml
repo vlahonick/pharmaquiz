@@ -31,10 +31,7 @@ Correct answers: Răspunsuri corecte
 Wrong answers: Răspunsuri gresite
 Your answer: Răspunsul dvs.
 Correct answer: Răspunsul corect
-How many correct answers a question has?: Câte de multe răspunsuri corecte are o întrebare?
-A question can have at least 1 correct answer to a maximum of 4.: O întrebare are cel puţin 1 şi cel mult 4.
-How do I see my score and my wrong answers?: Cum pot vedea scorul și răspunsurile mele greșite?
-Your score will be displayed after you answer all questions.: Scorul dvs. va fi afișat după ce răspundeţi la toate întrebari.
+
 Score: Scor
 Fields with <strong>*</strong> are mandatory.: Câmpurile marcate cu <strong>*</strong> sunt obligatorii.
 Name *: Nume *
@@ -50,12 +47,7 @@ Add question: Adăugați întrebare
 Quiz results: Scorul test
 Questions: Întrebari
 Category: Tema
-'<a href="http://en.wikipedia.org/wiki/Pharmacy" target="_blank">Pharmacy</a>': '<a href="http://ro.wikipedia.org/wiki/Farmacie" target="_blank">Farmacie</a>'
-'<a href="http://en.wikipedia.org/wiki/Pharmaceutical_drug" target="_blank">Pharmaceutical drug</a>': '<a href="http://ro.wikipedia.org/wiki/Medicament" target="_blank">Medicament</a>'
-'<a href="http://en.wikipedia.org/wiki/Pharmacology" target="_blank">Pharmacology</a>': '<a href="http://ro.wikipedia.org/wiki/Farmacologie" target="_blank">Farmacologie</a>'
-'<a href="http://en.wikipedia.org/wiki/Toxicology" target="_blank">Toxicology</a>': '<a href="http://ro.wikipedia.org/wiki/Toxicologie" target="_blank">Toxicologie</a>'
-'<a href="http://www.edqm.eu/en/edqm-homepage-628.html" target="_blank">EDQM</a>':
-'<a href="http://www.who.int/medicines/areas/quality_safety/quality_assurance/resources/European_Pharmacopoeia.pdf" target="_blank">WHO EP</a>':
+
 NSAIDs: AINS
 Anti-inflammatory: Antiinflamatoare
 Antihypertensives: Antihipertensive
@@ -79,7 +71,16 @@ Every question will be reviewed before publishing. Duplicates will be deleted.: 
 If you want to send a question in another language, choose one of the available languages from the top right menu and send the question in the choosen language form.: Dacă doriți să trimiteți o întrebare într-o altă limbă, alege una dintre limbile disponibile din meniul din dreapta sus și trimiteți întrebarea în formă limbei alease.
 PharmaQuiz - A website dedicated in Pharmacy Quizzes!: PharmaQuiz - PharmaQuiz - Un site de test pentru Farmacisti!
 Show results: Rezultate
+
+Report mistake | Help: Raport greșeală | Ajutor
 Close help: Închidere ajutor
+How do I report typos/inaccurate information?: Cum pot raporta greșeli de ortografie sau informații inexacte?
+Click <a href="/en/contact/">here</a> to open the contact form with a predifined text about mistakes in a new tab.: Apăsati <a href="/el/contact/">aici</a> ca să deschideți formularul de contact într-o filă nouă.
+How many correct answers a question has?: Câte de multe răspunsuri corecte are o întrebare?
+A question can have at least 1 correct answer to a maximum of 4.: O întrebare are cel puţin 1 şi cel mult 4.
+How do I see my score and my wrong answers?: Cum pot vedea scorul și răspunsurile mele greșite?
+Your score will be displayed after you answer all questions.: Scorul dvs. va fi afișat după ce răspundeţi la toate întrebari.
+
 Enter number...: Introduceți numărul...
 
 PharmaQuiz Statistics: Statistici PharmaQuiz

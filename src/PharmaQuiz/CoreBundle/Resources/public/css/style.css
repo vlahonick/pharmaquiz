@@ -326,7 +326,19 @@ article, aside, details, footer, header, menu, nav, section {
   text-decoration: none;
 }
 
-.main ul li a:hover {
+.main .post ul li a:hover {
+  text-decoration: underline;
+}
+
+.main .post ul li {
+  margin-bottom: 10px;
+}
+.main #show ul li {
+  margin-bottom: 5px;
+}
+
+.main #show ul li a {
+  color: #2b9208;
   text-decoration: underline;
 }
 

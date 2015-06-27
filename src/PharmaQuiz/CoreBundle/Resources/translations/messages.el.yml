@@ -31,10 +31,7 @@ Correct answers: Σωστές απαντήσεις
 Wrong answers: Λάθος απαντήσεις
 Your answer: Η απάντησή σας
 Correct answer: Σωστή απάντηση
-How many correct answers a question has?: Πόσες σωστές απαντήσεις έχει μια ερώτηση;
-A question can have at least 1 correct answer to a maximum of 4.: Μια ερώτηση έχει τουλάχιστον 1 σωστή απάντηση και μέχρι 4 το μέγιστο.
-How do I see my score and my wrong answers?: Πώς βλέπω τη βαθμολογία και τις λάθος απαντήσεις μου;
-Your score will be displayed after you answer all questions.: Η βαθμολογία και λάθος απαντήσεις σας εμφανίζονται αφού απαντήσετε όλες τις ερωτήσεις.
+
 Score: Βαθμολογία
 Fields with <strong>*</strong> are mandatory.: Τα πεδία με <strong>*</strong> είναι υποχρεωτικά.
 Name *: Όνομα *
@@ -50,10 +47,7 @@ Add question: Προσθήκη ερώτησης
 Quiz results: Βαθμολογία quiz
 Questions: Ερωτήσεις
 Category: Θέμα
-'<a href="http://en.wikipedia.org/wiki/Pharmacy" target="_blank">Pharmacy</a>': '<a href="http://el.wikipedia.org/wiki/Φαρμακοποιός" target="_blank">Φαρμακοποιός</a>'
-'<a href="http://en.wikipedia.org/wiki/Pharmaceutical_drug" target="_blank">Pharmaceutical drug</a>': '<a href="http://el.wikipedia.org/wiki/Φάρμακο" target="_blank">Φάρμακο</a>'
-'<a href="http://en.wikipedia.org/wiki/Pharmacology" target="_blank">Pharmacology</a>': '<a href="http://el.wikipedia.org/wiki/Φαρμακολογία" target="_blank">Φαρμακολογία</a>'
-'<a href="http://en.wikipedia.org/wiki/Toxicology" target="_blank">Toxicology</a>': '<a href="http://el.wikipedia.org/wiki/Τοξικολογία" target="_blank">Τοξικολογία</a>'
+
 NSAIDs: ΜΣΑΦ
 Anti-inflammatory: Αντιφλεγμονώδη
 Antihypertensives: Αντιυπερτασικά
@@ -77,7 +71,17 @@ Every question will be reviewed before publishing. Duplicates will be deleted.: 
 If you want to send a question in another language, choose one of the available languages from the top right menu and send the question in the choosen language form.: Αν θέλετε να στείλετε μια ερώτηση σε άλλη γλώσσα, επιλέξτε μία από τις διαθέσιμες γλώσσες στο μενού πάνω δεξιά και στείλτε την ερώτηση από τη φόρμα της επιλεγμένης γλώσσας.
 PharmaQuiz - A website dedicated in Pharmacy Quizzes!: PharmaQuiz - Μια ιστοσελίδα με quiz για Φαρμακοποιούς!
 Show results: Προβολή βαθμολογίας
+
+Report mistake | Help: Αναφορά λάθους | Βοήθεια
 Close help: Κλείσιμο βοήθειας
+How do I report typos/inaccurate information?: Πώς αναφέρω ορθογραφικά λάθη και λάθη περιεχομένου;
+Click <a href="/en/contact/">here</a> to open the contact form with a predifined text about mistakes in a new tab.: Πατήστε <a href="/el/contact/">εδώ</a> για να σας ανοίξει η φόρμα επικοινωνίας σε νέο παράθυρο με ένα προκαθορισμένο κείμενο.
+How many correct answers a question has?: Πόσες σωστές απαντήσεις έχει μια ερώτηση;
+A question can have at least 1 correct answer to a maximum of 4.: Μια ερώτηση έχει τουλάχιστον 1 σωστή απάντηση και μέχρι 4 το μέγιστο.
+How do I see my score and my wrong answers?: Πώς βλέπω τη βαθμολογία και τις λάθος απαντήσεις μου;
+Your score will be displayed after you answer all questions.: Η βαθμολογία και λάθος απαντήσεις σας εμφανίζονται αφού απαντήσετε όλες τις ερωτήσεις.
+
+
 Enter number...: Εισάγετε αριθμό...
 
 PharmaQuiz Statistics: Στατιστικά του PharmaQuiz

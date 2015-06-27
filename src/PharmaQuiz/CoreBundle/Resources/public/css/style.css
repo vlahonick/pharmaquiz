@@ -326,6 +326,10 @@ article, aside, details, footer, header, menu, nav, section {
   text-decoration: none;
 }
 
+.main .post ul.contents li {
+  margin-bottom: 0;
+}
+
 .main .post ul li a:hover {
   text-decoration: underline;
 }
@@ -900,11 +904,13 @@ ul.check-list li:before {
   padding: 10px;
   border-radius: 6px;
   margin-top: 15px;
+  text-align: center;
 }
 
 .stats p {
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 .stats ul li {
   display: inline;

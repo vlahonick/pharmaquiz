@@ -62,6 +62,11 @@ class QuizQuestion
 
     /**
      * Show the title of the translation using the __call proxy.
+     *
+     * Sta questions anti gia
+     * 'Item "PharmaQuiz\CoreBundle\Entity\Page:000000000b170ead00007f6ae9dc88fb" has been successfully updated.'
+     * emfanizei
+     * 'Item "Terms of use" has been successfully updated.'
      */
     public function __toString()
     {

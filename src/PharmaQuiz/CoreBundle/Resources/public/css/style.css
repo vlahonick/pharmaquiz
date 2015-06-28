@@ -115,52 +115,6 @@ article, aside, details, footer, header, menu, nav, section {
   text-indent: -4000px;
 }
 
-#navigation {
-  height: 52px;
-  padding-top: 4px;
-  font-family: 'Ubuntu', 'Trebuchet MS', Verdana, Sans-serif;
-  font-weight: 700;
-  background: url('../images/navigation.png') repeat-x 0 0;
-  box-shadow: 0px -1px 2px rgba(0,0,0,0.1);
-}
-
-#navigation ul {
-  list-style: none;
-  list-style-position: outside;
-}
-
-#navigation ul li {
-  float: left;
-  padding-right: 2px;
-  line-height: 52px;
-  background: url('../images/nav-border.png') no-repeat right 0;
-  font-size: 18px;
-  margin-top: -1px;
-}
-
-#navigation ul li.last {
-  background: none;
-}
-
-#navigation ul li a {
-  display: block;
-  padding: 0 32px 0 28px;
-  color: #878787;
-}
-
-#navigation ul li a:hover, #navigation ul li.active a {
-  text-decoration: none;
-  color: #2b9208;
-}
-
-#navigation ul li.first a {
-  padding-left: 38px;
-}
-
-#navigation a.nav-btn {
-  display: none;
-}
-
 .slider-holder {
   max-width: 100%;
   position: relative;
@@ -290,10 +244,6 @@ article, aside, details, footer, header, menu, nav, section {
 .main h1 {
   font-size: 28px;
   border-bottom: 1px dotted #ccc;
-}
-
-._home .main ul li {
-  line-height: 30px;
 }
 
 .main h2 {
@@ -905,17 +855,18 @@ ul.check-list li:before {
   border-radius: 6px;
   margin-top: 15px;
   text-align: center;
+  font-weight: bold;
 }
 
 .stats p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 10px;
 }
 .stats ul li {
   display: inline;
-  margin-right: 25px;
-  font-weight: bold;
+  margin-right: 50px;
 }
 
 .stats > ul li:before {

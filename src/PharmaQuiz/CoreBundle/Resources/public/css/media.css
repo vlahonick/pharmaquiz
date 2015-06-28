@@ -11,20 +11,6 @@
     width: 748px;
   }
 
-  #navigation ul li a {
-    padding: 0 22px;
-  }
-
-  #navigation ul li.first a {
-    padding-left: 22px;
-  }
-
-/*
-  #navigation ul li.active {
-    display: none !important;
-  }
-*/
-
   .slider-holder {
     position: relative;
   }
@@ -203,6 +189,10 @@
     margin: 0 auto;
   }
 
+  .stats ul li {
+    margin-right: 0;
+  }
+
   #header {
     position: relative;
     z-index: 1000;
@@ -230,69 +220,6 @@
 
   .stats ul li {
     display: block;
-  }
-
-  #navigation {
-    padding: 0 0 0 0;
-    height: auto;
-  }
-
-  #navigation a.nav-btn {
-    display: block;
-    font-size: 13px;
-    line-height: 36px;
-    padding-top: 0px;
-    padding-left: 22px;
-    color: #2b9208;
-    font-size: 16px;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-weight: 700;
-  }
-
-  #navigation a.nav-btn:hover {
-    text-decoration: none;
-  }
-
-  #navigation a.nav-btn span.arr {
-    background: url(../images/nav-arr.png) no-repeat 0 0;
-    width: 13px;
-    height: 9px;
-    position: absolute;
-    right: 14px;
-    top: 12px;
-  }
-
-  #navigation a.nav-btn span.arr.active {
-    background: url(../images/nav-arr.png) no-repeat 0 bottom;
-  }
-
-  #navigation ul li.active {
-    display: none !important;
-  }
-
-  #navigation {
-    position: relative;
-    z-index: 1000;
-  }
-
-  #navigation ul {
-    display: none;
-    width: 100%;
-  }
-
-  #navigation ul li {
-    display: block;
-    line-height: 36px !important;
-    float: none;
-    background: url(../images/navigation.png) repeat 0 0;
-  }
-
-  #navigation ul li a {
-    padding: 0 22px;
-  }
-
-  #navigation ul li.first a {
-    padding-left: 22px;
   }
 
   .m-slider {
@@ -575,22 +502,8 @@
 
 @media only screen and ( max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)  {
 
-  #navigation a.nav-btn span.arr {
-    background: url('../images/nav-arr@2x.png') no-repeat 0 0;
-    background-size: 13px 18px;
-  }
-
-  #navigation a.nav-btn span.arr.active {
-    background: url('../images/nav-arr@2x.png') no-repeat 0 bottom;
-    background-size: 13px 18px;
-  }
-
   #logo a { background: url(../images/pharmaquiz_logo_small.jpg) no-repeat 0 0;
     background-size: 81px 33px;
-  }
-
-  #navigation ul li.active {
-    display: none !important;
   }
 
   .legend_segment span {

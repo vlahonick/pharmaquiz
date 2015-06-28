@@ -29,13 +29,13 @@
                         {% include 'PharmaQuizCoreBundle:Default:language_switcher.html.twig' %}
                     </header>
                     <!-- end of header -->
-                    <!-- navigation -->
+                    <!-- nav -->
                     <nav>
                       <label for="drop" class="toggle">MENU <i style="margin-top: 20px;" class="fa fa-bars"></i></label>
                       <input type="checkbox" id="drop" />
                       {{ knp_menu_render('PharmaQuizCoreBundle:Builder:mainMenu', {'currentClass': 'active'}) }}
                     </nav>
-                    <!-- end of navigation -->
+                    <!-- end of nav -->
 
                     {% block slider %}
                     {% endblock %}
